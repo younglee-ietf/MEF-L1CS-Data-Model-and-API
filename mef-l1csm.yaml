@@ -1,0 +1,564 @@
+---
+swagger: "2.0"
+info:
+  description: "mef-l1csm API generated from yang definitions"
+  version: "1.0"
+  title: "mef-l1csm API"
+host: "localhost:1234"
+consumes:
+- "application/yang-data+json"
+produces:
+- "application/yang-data+json"
+paths:
+  /data/l1cs/:
+    get:
+      tags:
+      - "mef-l1csm"
+      description: "returns mef.l1csm.L1cs"
+      parameters: []
+      responses:
+        200:
+          description: "mef.l1csm.L1cs"
+          schema:
+            $ref: "#/definitions/mef.l1csm.L1cs"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "mef-l1csm"
+      description: "creates mef.l1csm.L1cs"
+      parameters:
+      - in: "body"
+        name: "mef.l1csm.L1cs.body-param"
+        description: "mef.l1csm.L1cs to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.L1cs"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "mef-l1csm"
+      description: "creates or updates mef.l1csm.L1cs"
+      parameters:
+      - in: "body"
+        name: "mef.l1csm.L1cs.body-param"
+        description: "mef.l1csm.L1cs to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.L1cs"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "mef-l1csm"
+      description: "removes mef.l1csm.L1cs"
+      parameters: []
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/l1cs/access/:
+    get:
+      tags:
+      - "mef-l1csm"
+      description: "returns mef.l1csm.l1cs.Access"
+      parameters: []
+      responses:
+        200:
+          description: "mef.l1csm.l1cs.Access"
+          schema:
+            $ref: "#/definitions/mef.l1csm.l1cs.Access"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "mef-l1csm"
+      description: "creates mef.l1csm.l1cs.Access"
+      parameters:
+      - in: "body"
+        name: "mef.l1csm.l1cs.Access.body-param"
+        description: "mef.l1csm.l1cs.Access to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.l1cs.Access"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "mef-l1csm"
+      description: "creates or updates mef.l1csm.l1cs.Access"
+      parameters:
+      - in: "body"
+        name: "mef.l1csm.l1cs.Access.body-param"
+        description: "mef.l1csm.l1cs.Access to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.l1cs.Access"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "mef-l1csm"
+      description: "removes mef.l1csm.l1cs.Access"
+      parameters: []
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/l1cs/access/uni-list/:
+    post:
+      tags:
+      - "mef-l1csm"
+      description: "creates mef.l1csm.UniAttributes"
+      parameters:
+      - in: "body"
+        name: "mef.l1csm.UniAttributes.body-param"
+        description: "mef.l1csm.UniAttributes to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.UniAttributes"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+  /data/l1cs/access/uni-list={UNI-ID}/:
+    get:
+      tags:
+      - "mef-l1csm"
+      description: "returns mef.l1csm.UniAttributes"
+      parameters:
+      - name: "UNI-ID"
+        in: "path"
+        description: "Id of uni-list"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "mef.l1csm.UniAttributes"
+          schema:
+            $ref: "#/definitions/mef.l1csm.UniAttributes"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "mef-l1csm"
+      description: "creates mef.l1csm.UniAttributes"
+      parameters:
+      - name: "UNI-ID"
+        in: "path"
+        description: "Id of uni-list"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "mef.l1csm.UniAttributes.body-param"
+        description: "mef.l1csm.UniAttributes to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.UniAttributes"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "mef-l1csm"
+      description: "creates or updates mef.l1csm.UniAttributes"
+      parameters:
+      - name: "UNI-ID"
+        in: "path"
+        description: "Id of uni-list"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "mef.l1csm.UniAttributes.body-param"
+        description: "mef.l1csm.UniAttributes to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.UniAttributes"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "mef-l1csm"
+      description: "removes mef.l1csm.UniAttributes"
+      parameters:
+      - name: "UNI-ID"
+        in: "path"
+        description: "Id of uni-list"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/l1cs/service/:
+    get:
+      tags:
+      - "mef-l1csm"
+      description: "returns mef.l1csm.l1cs.Service"
+      parameters: []
+      responses:
+        200:
+          description: "mef.l1csm.l1cs.Service"
+          schema:
+            $ref: "#/definitions/mef.l1csm.l1cs.Service"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "mef-l1csm"
+      description: "creates mef.l1csm.l1cs.Service"
+      parameters:
+      - in: "body"
+        name: "mef.l1csm.l1cs.Service.body-param"
+        description: "mef.l1csm.l1cs.Service to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.l1cs.Service"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "mef-l1csm"
+      description: "creates or updates mef.l1csm.l1cs.Service"
+      parameters:
+      - in: "body"
+        name: "mef.l1csm.l1cs.Service.body-param"
+        description: "mef.l1csm.l1cs.Service to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.l1cs.Service"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "mef-l1csm"
+      description: "removes mef.l1csm.l1cs.Service"
+      parameters: []
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/l1cs/service/service-list/:
+    post:
+      tags:
+      - "mef-l1csm"
+      description: "creates mef.l1csm.l1cs.service.ServiceList"
+      parameters:
+      - in: "body"
+        name: "mef.l1csm.l1cs.service.ServiceList.body-param"
+        description: "mef.l1csm.l1cs.service.ServiceList to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.l1cs.service.ServiceList"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+  /data/l1cs/service/service-list={subscriber-l1vc-id}/:
+    get:
+      tags:
+      - "mef-l1csm"
+      description: "returns mef.l1csm.l1cs.service.ServiceList"
+      parameters:
+      - name: "subscriber-l1vc-id"
+        in: "path"
+        description: "Id of service-list"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "mef.l1csm.l1cs.service.ServiceList"
+          schema:
+            $ref: "#/definitions/mef.l1csm.l1cs.service.ServiceList"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "mef-l1csm"
+      description: "creates mef.l1csm.l1cs.service.ServiceList"
+      parameters:
+      - name: "subscriber-l1vc-id"
+        in: "path"
+        description: "Id of service-list"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "mef.l1csm.l1cs.service.ServiceList.body-param"
+        description: "mef.l1csm.l1cs.service.ServiceList to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.l1cs.service.ServiceList"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "mef-l1csm"
+      description: "creates or updates mef.l1csm.l1cs.service.ServiceList"
+      parameters:
+      - name: "subscriber-l1vc-id"
+        in: "path"
+        description: "Id of service-list"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "mef.l1csm.l1cs.service.ServiceList.body-param"
+        description: "mef.l1csm.l1cs.service.ServiceList to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.l1cs.service.ServiceList"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "mef-l1csm"
+      description: "removes mef.l1csm.l1cs.service.ServiceList"
+      parameters:
+      - name: "subscriber-l1vc-id"
+        in: "path"
+        description: "Id of service-list"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+  /data/l1cs/service/service-list={subscriber-l1vc-id}/service-config/:
+    get:
+      tags:
+      - "mef-l1csm"
+      description: "returns mef.l1csm.SubscriberAttributes"
+      parameters:
+      - name: "subscriber-l1vc-id"
+        in: "path"
+        description: "Id of service-list"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "mef.l1csm.SubscriberAttributes"
+          schema:
+            $ref: "#/definitions/mef.l1csm.SubscriberAttributes"
+        400:
+          description: "Internal error"
+    post:
+      tags:
+      - "mef-l1csm"
+      description: "creates mef.l1csm.SubscriberAttributes"
+      parameters:
+      - name: "subscriber-l1vc-id"
+        in: "path"
+        description: "Id of service-list"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "mef.l1csm.SubscriberAttributes.body-param"
+        description: "mef.l1csm.SubscriberAttributes to be added to list"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.SubscriberAttributes"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        409:
+          description: "Object already exists"
+    put:
+      tags:
+      - "mef-l1csm"
+      description: "creates or updates mef.l1csm.SubscriberAttributes"
+      parameters:
+      - name: "subscriber-l1vc-id"
+        in: "path"
+        description: "Id of service-list"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "mef.l1csm.SubscriberAttributes.body-param"
+        description: "mef.l1csm.SubscriberAttributes to be added or updated"
+        required: false
+        schema:
+          $ref: "#/definitions/mef.l1csm.SubscriberAttributes"
+      responses:
+        201:
+          description: "Object created"
+        400:
+          description: "Internal error"
+        204:
+          description: "Object modified"
+    delete:
+      tags:
+      - "mef-l1csm"
+      description: "removes mef.l1csm.SubscriberAttributes"
+      parameters:
+      - name: "subscriber-l1vc-id"
+        in: "path"
+        description: "Id of service-list"
+        required: true
+        type: "string"
+      responses:
+        400:
+          description: "Internal error"
+        204:
+          description: "Object deleted"
+definitions:
+  mef.l1csm.L1cs:
+    type: "object"
+    properties:
+      service:
+        description: "L1VC service"
+        $ref: "#/definitions/mef.l1csm.l1cs.Service"
+      access:
+        description: "UNI configurations"
+        $ref: "#/definitions/mef.l1csm.l1cs.Access"
+  mef.l1csm.ProtocolCodingOpticalInterface:
+    type: "object"
+    properties:
+      coding:
+        type: "string"
+        description: "coding function"
+      protocol:
+        type: "string"
+        description: "List of physical layer L1VC clientprotocol"
+      optical_interface:
+        type: "string"
+        description: "optical-interface-function"
+  mef.l1csm.SubscriberAttributes:
+    allOf:
+    - $ref: "#/definitions/mef.l1csm.SubscriberL1vcSlsServiceAttribute"
+    - type: "object"
+      properties:
+        subscriber-l1vc-ep-UNI-2:
+          type: "string"
+          description: "this is the other end of subscriber L1VC end \r\n        \
+            \            point ID value = UNI-2"
+          x-path: "/l1cs/access/uni-list/UNI-ID"
+        subscriber-l1vc-ep-id-2:
+          type: "string"
+          description: "subscriber end point ID of the other end"
+        subscriber-l1vc-ep-UNI-1:
+          type: "string"
+          description: "this is one end of subscriber L1VC end point \r\n        \
+            \           ID value = UNI-1"
+          x-path: "/l1cs/access/uni-list/UNI-ID"
+        subscriber-l1vc-ep-id-1:
+          type: "string"
+          description: "subscriber end point ID of one end"
+        subscriber-l1vc-id:
+          type: "string"
+          description: "subscriber L1VC identifier"
+      description: "subscriber layer 1 connection service service level"
+  mef.l1csm.SubscriberL1vcSlsServiceAttribute:
+    type: "object"
+    properties:
+      time-start:
+        type: "string"
+        description: "a time that represent the date and time \r\n               \
+          \      for the start of the SLS"
+      time-interval:
+        type: "integer"
+        format: "int32"
+        description: "a time interval (e.g., 2,419,200 seconds \r\n              \
+          \       which is 28 days) that is used in  \r\n                     conjunction\
+          \ wuth time-start to specify a \r\n                     contiguous sequence\
+          \ of time intervals T for \r\n                     determining when performance\
+          \ objectives are \r\n                     met."
+      performance-metric:
+        type: "string"
+        description: "list of performance metric"
+  mef.l1csm.UniAttributes:
+    allOf:
+    - $ref: "#/definitions/mef.l1csm.ProtocolCodingOpticalInterface"
+    - type: "object"
+      properties:
+        UNI-ID:
+          type: "string"
+          description: "the UNI id of UNI Service Attributes"
+      description: "uni-service-attributes"
+  mef.l1csm.l1cs.Access:
+    type: "object"
+    properties:
+      uni-list:
+        type: "array"
+        description: "uni identifier"
+        items:
+          $ref: "#/definitions/mef.l1csm.UniAttributes"
+  mef.l1csm.l1cs.Service:
+    type: "object"
+    properties:
+      service-list:
+        type: "array"
+        description: "an unique identifier of a service"
+        items:
+          $ref: "#/definitions/mef.l1csm.l1cs.service.ServiceList"
+  mef.l1csm.l1cs.service.ServiceList:
+    type: "object"
+    properties:
+      service-config:
+        description: "service-config container"
+        $ref: "#/definitions/mef.l1csm.SubscriberAttributes"
+      subscriber-l1vc-id:
+        type: "string"
+        description: "a unique service identifier for \r\n                       \
+          \     L1VC."
